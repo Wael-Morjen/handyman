@@ -17,3 +17,4 @@ an app made for the second semester project
 
 ### fixes:
 - [URLSearchParams - Error: Not Implemented](https://justinnoel.dev/2020/12/08/react-native-urlsearchparams-error-not-implemented/)
+- [Reanimated 2 failed to create a worklet, maybe you forgot to add Reanimated's babel plugin?](https://github.com/software-mansion/react-native-reanimated/issues/1875#issuecomment-1024067323)

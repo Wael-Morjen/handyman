@@ -1,5 +1,5 @@
-import { StyleSheet, View } from 'react-native';
-import { NativeBaseProvider, Button, VStack, Text, Input, extendTheme, Heading } from "native-base";
+import { StyleSheet, View,ToastAndroid } from 'react-native';
+import { NativeBaseProvider, Button, VStack, Text, Input, extendTheme, Heading,useToast } from "native-base";
 import { MaterialIcons } from '@expo/vector-icons';
 import { isLoaded, isLoading, useFonts } from 'expo-font';
 import { useState } from 'react';
@@ -9,7 +9,7 @@ import {supabase} from '../../../lib/supabase'
 
 export default function Login({ navigation }) {
 
-
+  const toast = useToast();
 
   const [loaded] = useFonts({
     'nexa': require('../../../assets/fonts/NexaBold.otf'),
@@ -52,7 +52,11 @@ async function check(){
   if (temp){
     navigation.navigate('MainScreen')
   }
-  alert(JSON.stringify(temp));
+  else{
+    ToastAndroid.show('error logging in!', ToastAndroid.SHORT);
+    
+  }
+  //alert(JSON.stringify(temp));
 }
 
   if (!isLoaded('nexa')) {
@@ -81,7 +85,6 @@ async function check(){
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#2196F3'

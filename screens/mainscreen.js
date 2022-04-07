@@ -56,29 +56,29 @@ export default function MainScreen({ navigation }) {
       </Avatar>
       </View>
       <ScrollView w={'100%'} height={'1%'} marginTop={'30%'} >
-        <View style={{width:'100%', height:320,left:-50,backgroundColor:'#f9b126', borderRadius:50}}  onStartShouldSetResponder={() => alert(1)}>
-        <Gardener height={250} style={{ marginLeft:20, marginTop:10}} />
-        <Text style={{display:'flex', alignSelf:'center', top:0, left:20}} color={'#151e34'} fontSize={32}>Gardener</Text>
+        <View style={{width:'100%', display:'flex',flexDirection:'row', height:140,left:-50,backgroundColor:'#f9b126', borderRadius:30}}  onStartShouldSetResponder={() => navigation.navigate('GardenerScreen')}>
+        <Gardener height={120} style={{ marginLeft:-60, marginTop:10}} />
+        <Text style={{display:'flex', alignSelf:'flex-start', top:'11%', left:-110}} color={'#151e34'} fontSize={32}>Gardener</Text>
         </View>
         
         
 
-        <View style={{width:'100%', right:-50, marginTop:50,height:320, backgroundColor:'#cbeddd', borderRadius:50}}>
-        <Painter height={250} style={{ marginLeft:-10, marginTop:15}}/>  
-        <Text style={{display:'flex', alignSelf:'center', top:-5, right:20}} color={'#363e8d'} fontSize={32}>Painter</Text>
+        <View style={{width:'100%', right:-50, display:'flex',flexDirection:'row',marginTop:30,height:140, backgroundColor:'#cbeddd', borderRadius:30}}  onStartShouldSetResponder={() => navigation.navigate('PainterScreen')}>
+        <Text style={{display:'flex', alignSelf:'flex-start', top:'11.5%', left:50}} color={'#363e8d'} fontSize={32}>Painter</Text>
+        <Painter height={120} style={{ marginLeft:-30, marginTop:10}}/>  
         </View>
 
         
 
-        <View style={{width:'100%', height:320, marginTop:50,left:-50,backgroundColor:'#f6836b', borderRadius:50}}>
-        <Carpenter height={250} style={{ marginLeft:20, marginTop:15}}/>
-        <Text style={{display:'flex', alignSelf:'center',top:-10, left:20}} color={'#30526a'} fontSize={32}>Carpenter</Text>
+        <View style={{width:'100%', display:'flex',flexDirection:'row',height:140, marginTop:30,left:-50,backgroundColor:'#f6836b', borderRadius:30}}  onStartShouldSetResponder={() => navigation.navigate('CarpenterScreen')}>
+        <Carpenter height={120} style={{ marginLeft:-60, marginTop:10}}/>
+        <Text style={{display:'flex', alignSelf:'flex-start',top:'11%', left:-110}} color={'#30526a'} fontSize={32}>Carpenter</Text>
         </View>
         
 
-        <View style={{width:'100%', right:-50,height:320, marginTop:50,marginBottom:50, backgroundColor:'#caeefb', borderRadius:50}}>
-        <Plumber height={280} style={{ marginLeft:-10, marginTop:20}}/>
-        <Text style={{display:'flex', alignSelf:'center', top:-40, right:20}} color={'#3d3361'} fontSize={32}>Plumber</Text>
+        <View style={{width:'100%', right:-50, display:'flex',flexDirection:'row',marginTop:30,height:140, backgroundColor:'#caeefb', borderRadius:30}}  onStartShouldSetResponder={() => navigation.navigate('PlumberScreen')}>
+        <Text style={{display:'flex', alignSelf:'flex-start', top:'11.5%', left:50}} color={'#3d3361'} fontSize={32}>Plumber</Text>
+        <Plumber height={120} style={{ marginLeft:-50, marginTop:20}}/>
         </View>
         
         </ScrollView>
